@@ -17,15 +17,21 @@ public class Main {
         System.out.println("<< BANCO JMSZ >>\n<< IMPRIMINDO INFORMACOES DOS CLIENTES >>");
         System.out.println(contaPF1.toString());
         System.out.println(contaPF2.toString());
+        System.out.println(contaPF3.toString());
         System.out.println(contaPJ.toString());
 
         System.out.println("\n<< REALIZANDO OPERACOES >>");
         contaPF1.depositar(5000);
         contaPF2.depositar(2000);
         contaPJ.depositar(10000);
+        contaPJ.depositar(2000);
 
         contaPF1.sacar(200);
         contaPF2.sacar(1500);
+        contaPF2.sacar(200);
+        contaPJ.sacar(130);
+        contaPJ.sacar(200);
+        contaPJ.sacar(300);
         contaPJ.sacar(1640);
         
         contaPF1.extratoTaxas();
@@ -46,7 +52,7 @@ public class Main {
         System.out.println("Media: " +media);
 
         //verificacao pelo metodo equals
-        System.out.println("<< VERIFICANDO SE HA CONTAS IGUAIS (cpf ou cnpj) >>");
+        System.out.println("\n<< VERIFICANDO SE HA CONTAS IGUAIS (cpf ou cnpj) >>");
         System.out.println("\nConta " + pF1.getNome() + " equals (igual) Conta " + pF2.getNome() + "? ");
         System.out.println(pF1.autenticar(pF2.getCpf()));
         System.out.println("\nConta " + pF1.getNome() + " equals (igual) Conta " + pF3.getNome() + "? ");

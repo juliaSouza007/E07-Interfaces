@@ -76,8 +76,9 @@ public abstract class Conta {
     
     public void extratoTaxas(){
         float taxa = 0;
-        System.out.println("<< EXTRATO DE TAXAS >>");
+        System.out.println("\n<< EXTRATO DE TAXAS " +donoConta.getNome()+ " >>");
         System.out.println("Taxa de Manunteção: " + donoConta.calculaTaxas());
+        taxa += donoConta.calculaTaxas();
         for(int i = 0; i < operacoes.length; i++){
             if(operacoes[i] != null && operacoes[i].getTipo() == 's'){
                 System.out.println("Saque: " + operacoes[i].calculaTaxas());
@@ -85,7 +86,7 @@ public abstract class Conta {
             }
         }
         System.out.println();
-        System.out.println("Total: " + taxa);
+        System.out.printf("Total: %.2f\n", taxa);
     }
 
     //getters

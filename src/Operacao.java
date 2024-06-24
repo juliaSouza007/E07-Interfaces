@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * Classe responsável por registrar operações de saque e depósitos realizados em contas correntes.
  */
-public abstract class Operacao {
+public abstract class Operacao implements ITaxas {
 
     /* Data de realização da operação */
     private Date data;
